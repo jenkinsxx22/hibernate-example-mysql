@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Employee Management App in maven-hibernate</title>
+<%@include file="headerstyles.jsp" %>
 </head>
 <body>
-
-<h1>Hello if you are seeing this it means all things are working fine</h1>
+<%@include file="headermenu.jsp" %>
 
 </body>
 </html>

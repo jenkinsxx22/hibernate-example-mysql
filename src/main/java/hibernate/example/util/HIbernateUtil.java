@@ -15,7 +15,7 @@ public class HIbernateUtil {
 	    public static SessionFactory getSessionFactory() {
 	        if (sessionFactory == null) {
 	            try {
-	                Configuration configuration = new Configuration().configure();
+	                Configuration configuration = new Configuration().configure("src/main/resources/Hibernate.cfg.xml");
 
 	                // Hibernate settings equivalent to hibernate.cfg.xml's properties
 	                Properties settings = new Properties();
