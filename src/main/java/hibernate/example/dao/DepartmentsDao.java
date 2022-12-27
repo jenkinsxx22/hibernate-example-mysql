@@ -25,4 +25,23 @@ public class DepartmentsDao {
 		}
 		
 	}
+	
+	public void UpdateDepartment(Departments dept) {
+		
+		Transaction trn = null;
+		
+		try(Session ss = HIbernateUtil.getSessionFactory().openSession()){
+		
+			trn = ss.beginTransaction();
+			ss.saveOrUpdate(dept);
+			trn.commit();			
+			
+		}catch(Exception e) {
+			if(trn!=null) {				
+				trn.rollback();
+			}
+						
+		}
+		
+	}
 }
