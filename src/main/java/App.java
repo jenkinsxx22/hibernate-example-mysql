@@ -1,14 +1,13 @@
-
-public class App {
-
-	public static void main(String args[]) {
-		/*
-		 * import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Collection;
 
 import hibernate.example.dao.DepartmentsDao;
 import hibernate.example.model.Departments;
 import hibernate.example.model.Employees;
+
+public class App {
+
+	public static void main(String args[]) {
 
 		Employees emp1 = new Employees("Figiro","123","abc@gmail.com","Rtt, ddsll wewe");
 		Employees emp2 = new Employees("Diphona","456","def@gmail.com","Rtt, ddsll wewe");
@@ -35,7 +34,6 @@ import hibernate.example.model.Employees;
 		deptdao.SaveDepartment(dept1);
 		deptdao.SaveDepartment(dept2);
 			
-		*/
 		
 		System.out.println("Main Class");
 	}

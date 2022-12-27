@@ -15,7 +15,7 @@ public class HIbernateUtil {
 	    public static SessionFactory getSessionFactory() {
 	        if (sessionFactory == null) {
 	            try {
-	                Configuration configuration = new Configuration().configure("src/main/resources/Hibernate.cfg.xml");
+	                Configuration configuration = (Configuration) new Configuration().configure();
 
 	                // Hibernate settings equivalent to hibernate.cfg.xml's properties
 	                Properties settings = new Properties();
@@ -40,7 +40,7 @@ public class HIbernateUtil {
 	                ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 	                    .applySettings(configuration.getProperties()).build();
 
-	                sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+	                sessionFactory = configuration.buildSessionFactory();
 	            } catch (Exception e) {
 	                e.printStackTrace();
 	            }
